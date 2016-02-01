@@ -1,6 +1,6 @@
 package org.simondean.vertx.async.unit.fakes;
 
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 import java.util.function.Consumer;
 

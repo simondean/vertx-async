@@ -1,6 +1,6 @@
 package org.simondean.vertx.async.unit.fakes;
 
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 public class FakeErrorThrowingAsyncSupplier<T> extends FakeAsyncSupplier<T> {
   private final Error cause;

@@ -4,7 +4,7 @@ import org.simondean.vertx.async.DefaultAsyncResult;
 import org.simondean.vertx.async.FunctionWrapper;
 import org.simondean.vertx.async.ObjectWrapper;
 import org.simondean.vertx.async.Retry;
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 import java.util.function.Consumer;
 
