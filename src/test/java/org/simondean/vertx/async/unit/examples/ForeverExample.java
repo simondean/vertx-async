@@ -2,7 +2,7 @@ package org.simondean.vertx.async.unit.examples;
 
 import org.simondean.vertx.async.Async;
 import org.simondean.vertx.async.DefaultAsyncResult;
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 public class ForeverExample extends BaseExample {
   public void foreverExample(AsyncResultHandler<String> handler) {

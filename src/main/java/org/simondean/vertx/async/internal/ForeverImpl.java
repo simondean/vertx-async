@@ -3,8 +3,8 @@ package org.simondean.vertx.async.internal;
 import org.simondean.vertx.async.DefaultAsyncResult;
 import org.simondean.vertx.async.Forever;
 import org.simondean.vertx.async.FunctionWrapper;
-import org.vertx.java.core.AsyncResultHandler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.AsyncResultHandler;
+import io.vertx.core.Vertx;
 
 import java.util.function.Consumer;
 

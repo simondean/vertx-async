@@ -1,7 +1,7 @@
 package org.simondean.vertx.async.internal;
 
 import org.simondean.vertx.async.Waterfall;
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;

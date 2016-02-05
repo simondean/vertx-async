@@ -2,7 +2,7 @@ package org.simondean.vertx.async.internal;
 
 import org.simondean.vertx.async.WaterfallBuilder;
 import org.simondean.vertx.async.Waterfall;
-import org.vertx.java.core.AsyncResultHandler;
+import io.vertx.core.AsyncResultHandler;
 
 import java.util.function.Consumer;
 

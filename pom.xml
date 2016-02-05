@@ -50,10 +50,10 @@
     <mods.directory>target/mods</mods.directory>
 
     <!--Dependency versions-->
-    <vertx.version>2.1.5</vertx.version>
+    <vertx.version>3.1.0</vertx.version>
     <vertx.testtools.version>2.0.3-final</vertx.testtools.version>
-    <junit.version>4.11</junit.version>
-    <assertj.version>3.0.0</assertj.version>
+    <junit.version>4.12</junit.version>
+    <assertj.version>3.2.0</assertj.version>
 
     <!--Plugin versions-->
     <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
@@ -72,12 +72,6 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>${vertx.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>vertx-platform</artifactId>
       <version>${vertx.version}</version>
       <scope>provided</scope>
     </dependency>
@@ -119,48 +113,6 @@
 
   <build>
     <plugins>
-
-      <!-- The vert.x Maven plugin -->
-      <plugin>
-        <groupId>io.vertx</groupId>
-        <artifactId>vertx-maven-plugin</artifactId>
-        <version>${maven.vertx.plugin.version}</version>
-        <!--
-        You can specify extra config to the plugin as required here
-        <configuration>
-           <configFile>/path/to/MyVerticle.conf</configFile>
-           <instances>1</instances>
-           <classpath>src/main/resources/:src/test/resources/:target/classes/:target/test-classes/</classpath>
-        </configuration>
-        -->
-        <!-- Make sure that the plugin uses the vert.x versions from this pom.xml not from its own pom.xml -->
-        <dependencies>
-          <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-platform</artifactId>
-            <version>${vertx.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-hazelcast</artifactId>
-            <version>${vertx.version}</version>
-          </dependency>
-        </dependencies>
-        <executions>
-          <execution>
-            <id>PullInDeps</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>pullInDeps</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
 
       <!-- Other plugins required by the build -->
       <plugin>
@@ -274,23 +226,6 @@
             <phase>integration-test</phase>
             <goals>
               <goal>failsafe-report-only</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <descriptors>
-            <descriptor>src/main/assembly/mod.xml</descriptor>
-          </descriptors>
-        </configuration>
-        <executions>
-          <execution>
-            <id>assemble</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
             </goals>
           </execution>
         </executions>
